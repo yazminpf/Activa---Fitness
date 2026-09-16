@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Entrenamiento personal con Shelly Cortés. Planes de entrenamiento y alimentación personalizados para mujeres.">
+    <title>Shelly Cortés</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/Logo_iniciales.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="saltar-contenido" href="#banner">Saltar al contenido</a>
+
+    <header id="inicio">
+        <div class="encabezado">
+            <div class="activa">
+                <a href="index.html">
+                    <img src="img/Logo_completo.svg" alt="Activa Fitness">
+                </a>
+            </div>
+
+            <p class="lema">Activa tu mejor versión</p>
+
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/shelly.cortesfit/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="interfaces" id="menu-principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#programas">Programas</a>
+            <a href="entrenamiento.html">Entrenamientos</a>
+            <a href="#perfil">Entrenadora</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner" class="banner-img">
+            <div class="carrusel-wrapper">
+                <ul class="carrusel-track">
+                    <li><img src="img/fotos/banner.1.svg" alt="Sesión de entrenamiento en el gimnasio"></li>
+                    <li><img src="img/fotos/banner.2.svg" alt="Entrenamiento de fuerza con mancuernas"></li>
+                </ul>
+
+                <div class="descripcion">
+                    <h1>Entrenamiento personalizado</h1>
+                    <p>Planes hechos para tu cuerpo, tu horario y tus objetivos.</p>
+                    <a href="#programas" class="btn-cta">Ver programas</a>
+                </div>
+
+                <button class="carrusel-btn prev" aria-label="Imagen anterior">&#10094;</button>
+                <button class="carrusel-btn next" aria-label="Imagen siguiente">&#10095;</button>
+                <div class="carrusel-puntos"></div>
+            </div>
+        </section>
+
+        <section id="programas" class="sesiones">
+            <h2>Sesiones de entrenamiento personal</h2>
+            <p class="seccion-intro">Toca cualquier plan para ver qué incluye.</p>
+
+            <ul class="lista-tarjetas">
+                <li class="tarjeta" data-modal="basico" role="button" tabindex="0">
+                    <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">Básico</h3>
+                    <p class="descripcion-tarjeta">3 sesiones por semana</p>
+                </li>
+
+                <li class="tarjeta" data-modal="sesiones8" role="button" tabindex="0">
+                    <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">8 sesiones al mes</h3>
+                    <p class="descripcion-tarjeta">2 clases por semana</p>
+                </li>
+
+                <li class="tarjeta" data-modal="sesiones12" role="button" tabindex="0">
+                    <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">12 sesiones al mes</h3>
+                    <p class="descripcion-tarjeta">3 clases por semana</p>
+                </li>
+
+                <li class="tarjeta" data-modal="sesiones20" role="button" tabindex="0">
+                    <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">20 sesiones al mes</h3>
+                    <p class="descripcion-tarjeta">4 clases por semana</p>
+                </li>
+
+                <li class="tarjeta" data-modal="sesiones25" role="button" tabindex="0">
+                    <i class="fa-solid fa-weight-hanging" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">25 sesiones al mes</h3>
+                    <p class="descripcion-tarjeta">5 clases por semana</p>
+                </li>
+
+                <li class="tarjeta" data-modal="valoracion" role="button" tabindex="0">
+                    <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">Valoración</h3>
+                    <p class="descripcion-tarjeta">Incluida según el tipo de entrenamiento</p>
+                </li>
+
+                <li class="tarjeta" data-modal="alimentacion" role="button" tabindex="0">
+                    <i class="fa-solid fa-bowl-rice" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">Plan de alimentación</h3>
+                    <p class="descripcion-tarjeta">Incluido según el tipo de entrenamiento</p>
+                </li>
+
+                <li class="tarjeta" data-modal="seguimiento" role="button" tabindex="0">
+                    <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>
+                    <h3 class="titulo-tarjeta">Seguimiento</h3>
+                    <p class="descripcion-tarjeta">Incluido según el tipo de entrenamiento</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="perfil" id="perfil">
+            <div class="entrenador">
+                <h2>Entrenadora | Shelly Cortés</h2>
+                <ul class="credenciales">
+                    <li>Tecnóloga en Actividad Física</li>
+                    <li>Nutrición Deportiva Fitness</li>
+                    <li>Especialista en mujeres: pérdida de grasa, hipertrofia, recomposición corporal</li>
+                    <li>Flexibilidad, tonificación y control de estrés (Yoga / Pilates)</li>
+                    <li>Planes de entrenamiento y alimentación personalizados</li>
+                    <li>Acompañamiento constante y motivación para construir tu mejor versión</li>
+                </ul>
+            </div>
+
+            <div class="foto-perfil">
+                <img src="img/fotos/perfil.png" alt="Shelly Cortés, entrenadora personal">
+            </div>
+        </section>
+
+        <section class="entrenamiento" id="entrenamiento">
+            <h2>Tipos de entrenamiento</h2>
+            <p class="seccion-intro">Tres formas de trabajar el cuerpo, según lo que necesites hoy.</p>
+
+            <ul class="lista-tarjetas lista-tarjetas--foto">
+                <li class="trj-entrenamiento">
+                    <a href="entrenamiento.html#yoga">
+                        <img src="img/fotos/yoga.png" alt="Práctica de yoga">
+                        <h3 class="titulo-tarjeta">Yoga</h3>
+                        <p class="descripcion-tarjeta">Respiración, equilibrio y una experiencia liberadora.</p>
+                    </a>
+                </li>
+
+                <li class="trj-entrenamiento">
+                    <a href="entrenamiento.html#pilates">
+                        <img src="img/fotos/pilates.png" alt="Sesión de pilates">
+                        <h3 class="titulo-tarjeta">Pilates</h3>
+                        <p class="descripcion-tarjeta">Control, postura y fuerza profunda del core.</p>
+                    </a>
+                </li>
+
+                <li class="trj-entrenamiento">
+                    <a href="entrenamiento.html#flexibilidad">
+                        <img src="img/fotos/flexibilidad.png" alt="Rutina de flexibilidad">
+                        <h3 class="titulo-tarjeta">Flexibilidad</h3>
+                        <p class="descripcion-tarjeta">Movilidad articular y menos tensión acumulada.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-contenido">
+            <div class="footer-columna footer-marca">
+                <img src="img/Logo_iniciales.svg" alt="Activa Fitness">
+                <p>
+                    Entrenamiento personalizado para ayudarte a construir
+                    una versión más fuerte, saludable y segura de ti.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Explora</h2>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="entrenamiento.html">Entrenamientos</a></li>
+                    <li><a href="#perfil">Entrenadora</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Contacto</h2>
+                <ul class="footer-contacto">
+                    <li>
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <a href="https://wa.me/573004413458" target="_blank">WhatsApp</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        <a href="shelly.cortesfit1@gmail.com">shelly.cortesfit1@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Sígueme</h2>
+                <div class="footer-redes">
+                    <a href="https://www.instagram.com/shelly.cortesfit/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-linea"></div>
+
+        <div class="footer-inferior">
+            <p>© 2026 Activa Fitness. Todos los derechos reservados.</p>
+            <p>Diseñado para activar tu mejor versión.</p>
+        </div>
+    </footer>
+
+    <!-- Modal reutilizable -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+        <div class="modal-fondo" data-cerrar></div>
+
+        <div class="modal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar" data-cerrar>&times;</button>
+
+            <i class="modal-icono" id="modal-icono" aria-hidden="true"></i>
+            <h2 id="modal-titulo"></h2>
+            <p class="modal-resumen" id="modal-resumen"></p>
+
+            <ul class="modal-lista" id="modal-lista"></ul>
+
+            <a href="entrenamiento.html#precios" class="btn-cta" data-cerrar>Quiero este plan</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

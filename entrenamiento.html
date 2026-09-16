@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yoga, pilates y flexibilidad: los tipos de entrenamiento de Activa Fitness.">
+    <title>Shelly Cortés</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/Logo_iniciales.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="saltar-contenido" href="#tipos">Saltar al contenido</a>
+
+    <header id="inicio">
+        <div class="encabezado">
+            <div class="activa">
+                <a href="index.html">
+                    <img src="img/Logo_completo.svg" alt="Activa Fitness">
+                </a>
+            </div>
+
+            <p class="lema">Activa tu mejor versión</p>
+
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/shelly.cortesfit/" target="_blank" "Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="interfaces" id="menu-principal">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#programas">Programas</a>
+            <a href="entrenamiento.html" aria-current="page">Entrenamientos</a>
+            <a href="index.html#perfil">Entrenadora</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h1>Tipos de entrenamiento</h1>
+            <p>Cada modalidad trabaja algo distinto. Toca una tarjeta para ver cómo es una sesión por dentro.</p>
+        </section>
+
+        <section class="entrenamiento" id="tipos">
+            <ul class="lista-tarjetas lista-tarjetas--foto">
+                <li class="trj-entrenamiento" id="yoga" data-modal="yoga" role="button" tabindex="0">
+                    <img src="img/fotos/yoga.png" alt="Práctica de yoga">
+                    <h2 class="titulo-tarjeta">Yoga</h2>
+                    <p class="descripcion-tarjeta">Respiración, equilibrio y una experiencia liberadora.</p>
+                </li>
+
+                <li class="trj-entrenamiento" id="pilates" data-modal="pilates" role="button" tabindex="0">
+                    <img src="img/fotos/pilates.png" alt="Sesión de pilates">
+                    <h2 class="titulo-tarjeta">Pilates</h2>
+                    <p class="descripcion-tarjeta">Control, postura y fuerza profunda del core.</p>
+                </li>
+
+                <li class="trj-entrenamiento" id="flexibilidad" data-modal="flexibilidad" role="button" tabindex="0">
+                    <img src="img/fotos/flexibilidad.png" alt="Rutina de flexibilidad">
+                    <h2 class="titulo-tarjeta">Flexibilidad</h2>
+                    <p class="descripcion-tarjeta">Movilidad articular y menos tensión acumulada.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="precios" id="precios">
+        <h2>Planes y precios</h2>
+
+        <div class="tabla-wrapper">
+            <table class="tabla-precios">
+                <caption>Valores mensuales.<br><strong><i class="fa-solid fa-circle-exclamation"></i> IMPORTANTE:
+                    </strong>Entrenamiento semipersonalizado significa que la hora PUEDE SER COMPARTIDA con otra persona
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col"><b>PLAN</b></th>
+                        <th scope="col"><b>SESIONES</b></th>
+                        <th scope="col"><b>PRECIO</b></th>
+                        <th scope="col"><b>MODALIDAD</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Básico</th>
+                        <td>3 clases por semana</td>
+                        <td>$ 120.000</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8 sesiones</th>
+                        <td>2 clases por semana</td>
+                        <td>$ 350.000</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12 sesiones</th>
+                        <td>3 clases por semana</td>
+                        <td>$ 450.000</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">20 sesiones</th>
+                        <td>4 clases por semana</td>
+                        <td>$ 550.000</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">25 sesiones</th>
+                        <td>5 clases por semana</td>
+                        <td>$ 600.000</td>
+                        <td>Presencial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-contenido">
+            <div class="footer-columna footer-marca">
+                <img src="img/Logo_iniciales.svg" alt="Activa Fitness">
+                <p>
+                    Entrenamiento personalizado para ayudarte a construir
+                    una versión más fuerte, saludable y segura de ti.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Explora</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#programas">Programas</a></li>
+                    <li><a href="entrenamiento.html">Entrenamientos</a></li>
+                    <li><a href="index.html#perfil">Entrenadora</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Contacto</h2>
+                <ul class="footer-contacto">
+                    <li>
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <a href="https://wa.me/573004413458" target="_blank">WhatsApp</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        <a href="shelly.cortesfit1@gmail.com" target="_blank">shelly.cortesfit1@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h2>Sígueme</h2>
+                <div class="footer-redes">
+                    <a href="https://www.instagram.com/shelly.cortesfit/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-linea"></div>
+
+        <div class="footer-inferior">
+            <p>© 2026 Activa Fitness. Todos los derechos reservados.</p>
+            <p>Diseñado para activar tu mejor versión.</p>
+        </div>
+    </footer>
+
+    <!-- Modal reutilizable -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+        <div class="modal-fondo" data-cerrar></div>
+
+        <div class="modal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar" data-cerrar>&times;</button>
+
+            <i class="modal-icono" id="modal-icono" aria-hidden="true"></i>
+            <h2 id="modal-titulo"></h2>
+            <p class="modal-resumen" id="modal-resumen"></p>
+
+            <ul class="modal-lista" id="modal-lista"></ul>
+
+            <a href="#contacto" class="btn-cta" data-cerrar>Reservar una sesión</a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
