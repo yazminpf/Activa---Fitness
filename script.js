@@ -337,3 +337,87 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* ---------------------------------------------
+   CARRUSEL CON SCROLL-SNAP + AUTOPLAY
+--------------------------------------------- */
+
+function initCarruselScroll(wrapper) {
+    const scroller = wrapper.querySelector(".carrusel-scroll");
+    if (!scroller) return;
+
+    const slides = scroller.querySelectorAll("li");
+    const anclas = wrapper.querySelectorAll(".carrusel-anclas a");
+    if (slides.length < 2) return;
+
+    const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const intervalo = Number(wrapper.dataset.intervalo) || 6000;
+
+    let indice = 0;
+    let auto = null;
+
+    function irA(nuevo) {
+        indice = (nuevo + slides.length) % slides.length;
+        scroller.scrollTo({
+            left: slides[indice].offsetLeft - scroller.offsetLeft,
+            behavior: sinMovimiento ? "auto" : "smooth"
+        });
+    }
+
+    function iniciarAuto() {
+        if (sinMovimiento) return;
+        auto = setInterval(() => irA(indice + 1), intervalo);
+    }
+
+    function pausarAuto() {
+        clearInterval(auto);
+    }
+
+    function reiniciarAuto() {
+        pausarAuto();
+        iniciarAuto();
+    }
+
+    // Marcar el punto activo según la imagen visible
+    const observador = new IntersectionObserver(entradas => {
+        entradas.forEach(entrada => {
+            if (!entrada.isIntersecting) return;
+
+            const i = Array.from(slides).indexOf(entrada.target);
+            indice = i;
+
+            anclas.forEach((a, n) => {
+                a.classList.toggle("activo", n === i);
+                a.setAttribute("aria-current", n === i ? "true" : "false");
+            });
+        });
+    }, { root: scroller, threshold: 0.6 });
+
+    slides.forEach(slide => observador.observe(slide));
+
+    // Clic en los puntos: desplazar sin saltar la página
+    anclas.forEach((ancla, i) => {
+        ancla.addEventListener("click", e => {
+            e.preventDefault();
+            irA(i);
+            reiniciarAuto();
+        });
+    });
+
+    // Pausar mientras el usuario interactúa
+    wrapper.addEventListener("mouseenter", pausarAuto);
+    wrapper.addEventListener("mouseleave", iniciarAuto);
+    wrapper.addEventListener("focusin", pausarAuto);
+    wrapper.addEventListener("focusout", iniciarAuto);
+    scroller.addEventListener("touchstart", pausarAuto, { passive: true });
+    scroller.addEventListener("touchend", reiniciarAuto, { passive: true });
+
+    // Pausar si la pestaña no está visible
+    document.addEventListener("visibilitychange", () => {
+        document.hidden ? pausarAuto() : iniciarAuto();
+    });
+
+    iniciarAuto();
+}
+
+document.querySelectorAll(".carrusel-perfil").forEach(initCarruselScroll);
